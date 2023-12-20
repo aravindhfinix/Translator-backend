@@ -11,6 +11,8 @@ app.use(cors())
 
 app.use(express.json());
 
+app.get('/', (req, res) => { res.send('api is woorking') })
+
 app.post('/translate', async (req, res) => {
   try {
     const { text, sourceLanguage, targetLanguage } = req.body;
